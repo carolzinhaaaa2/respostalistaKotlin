@@ -1,0 +1,29 @@
+ Definiçao da classe Animal
+abstract class Animal(val nome: String, val tipo: String) {
+    Método abstrato emitirSom
+    abstract fun emitirSom()
+    
+      Exemplo de método comum
+    fun mostrarDetalhes() {
+        println("Nome: $nome, Tipo: $tipo")
+    }
+}
+
+   Exemplo de uso da classe Animal
+fun main() {
+       Criando uma instância de Animal (não é possível, pois Animal é abstrata)
+      val animal = Animal("Rex", "Cachorro")
+
+      Criando uma instância de Cachorro, que é uma subclasse de Animal
+    val cachorro = Cachorro("Rex")
+    cachorro.mostrarDetalhes()
+    cachorro.emitirSom() // Aqui o método emitirSom() é chamado, que foi implementado na classe Cachorro
+}
+
+   Definição da subclasse Cachorro que herda de Animal
+class Cachorro(nome: String) : Animal(nome, "Cachorro") {
+    // Implementação do método abstrato emitirSom
+    override fun emitirSom() {
+        println("Au Au!")
+    }
+} 
