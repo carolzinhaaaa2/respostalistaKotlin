@@ -1,0 +1,15 @@
+class Retangulo:
+    def _init_(self, base, altura):
+        self.base = base
+        self.altura = altura
+    
+    def calcularArea(self):
+        return self.base * self.altura
+    
+    def calcularPerimetro(self):
+        return 2 * (self.base + self.altura)
+
+ Exemplo de uso
+retangulo1 = Retangulo(5, 3)
+print("Área do retângulo:", retangulo1.calcularArea())
+print("Perímetro do retângulo:", retangulo1.calcularPerimetro())
