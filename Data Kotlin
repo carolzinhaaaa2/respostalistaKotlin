@@ -1,0 +1,12 @@
+class Data(private val dia: Int, private val mes: Int, private val ano: Int) {
+
+    // Método toString que retorna a data no formato [dia]/[mês]/[ano]
+    override fun toString(): String {
+        return "$dia/$mes/$ano"
+    }
+}
+
+fun main() { 
+    val data = Data(13, 5, 2024) // Criando um objeto Data representando 13/5/2024
+    println("Data: $data")
+}
