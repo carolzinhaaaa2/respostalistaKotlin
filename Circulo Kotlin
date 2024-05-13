@@ -1,18 +1,10 @@
-class Circulo(private val raio: Double) {
+class Circulo( val raio: Double) {
 
-      Método para calcular a área do círculo
     fun calcularArea(): Double {
-        return PI * raio * raio
+        return base * altura
     }
 
-      Método para calcular o perímetro do círculo
     fun calcularPerimetro(): Double {
-        return 2 * PI * raio
+        return 2 * (base + altura)
     }
-}
-
-fun main() {
-    val circulo = Circulo(5.0) // Criando um objeto Circulo com raio 5
-    println("Área do círculo: ${circulo.calcularArea()}")
-    println("Perímetro do círculo: ${circulo.calcularPerimetro()}")
 }
